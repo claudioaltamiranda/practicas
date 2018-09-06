@@ -1,0 +1,9 @@
+Práctica de git
+--------------------------
+pwd
+ls -a
+clear
+mkdir
+cd 
+cd ..
+rmdir
