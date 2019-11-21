@@ -1,0 +1,30 @@
+JSON Tutorial
+
+Convertir objeto js a JSON
+    let persona = JSON.stringify({nombre:"Claudio", apellido:"Altamiranda", edad:53});
+
+Convertir JSON a js
+    let obj = JSON.parse(persona);
+
+Almacenamiento en localStorage (se almacena un JSON)
+    localStorage.setItem("test", persona);
+
+Recuperación de localStorage (se recupera en formato JSON)
+    let temp = localStorage.getItem("test");
+    let obj = JSON.parse(temp);
+
+Tipo
+    application/json 
+Extensión
+    .json 
+
+Conversión de fechas (convertir desde una fecha en texto a Date)
+    var text = '{ "name":"John", "birth":"1986-12-14", "city":"New York"}';
+    var obj = JSON.parse(text, function (key, value) {
+        if (key == "birth") {
+            return new Date(value);
+        } else {
+            return value;
+        }
+    });
+
